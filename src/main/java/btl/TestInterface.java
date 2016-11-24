@@ -2,24 +2,23 @@ package btl;
 
 import java.util.Scanner;
 import btl.Question;
+import btl.Strategy;
 import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
 
 public class TestInterface {
-  TwoDigitAddition strategy;
   Scanner scanner;
   int numQuestions;
 
-  public TestInterface(TwoDigitAddition strategy) {
-    this.strategy = strategy;
+  public TestInterface() {
     this.scanner = new Scanner(System.in);
     this.numQuestions = 10;
   }
 
-  public Report runStrategy() {
+  public <T extends Strategy> Report runStrategy(T strategy) {
     long seed = (new Random()).nextLong();
-    List<Question> questions = this.strategy.generateQuestions(seed, this.numQuestions);
+    List<Question> questions = strategy.generateQuestions(seed, this.numQuestions);
     List<Answer> wrongAnswers = new ArrayList();
     List<Answer> rightAnswers = new ArrayList();
     // TODO: Look up iterators
