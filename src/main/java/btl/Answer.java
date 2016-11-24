@@ -14,6 +14,6 @@ public class Answer {
   }
 
   public boolean isCorrect() {
-    return this.answer == this.question.correctAnswer;
+    return this.answer.equals(this.question.correctAnswer);
   }
 }
