@@ -3,9 +3,9 @@ package btl;
 import btl.Question;
 
 public class Answer {
-  float timeToAnswer;
-  Question question;
-  String answer;
+  public float timeToAnswer;
+  public Question question;
+  public String answer;
 
   public Answer(float timeToAnswer, Question question, String answer) {
     this.timeToAnswer = timeToAnswer;
