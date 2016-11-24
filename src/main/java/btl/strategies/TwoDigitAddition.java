@@ -1,3 +1,5 @@
+package btl;
+
 import btl.Strategy;
 import btl.Question;
 import java.util.List;

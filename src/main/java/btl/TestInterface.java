@@ -1,3 +1,5 @@
+package btl;
+
 import java.util.Scanner;
 import btl.Question;
 import java.util.Random;
