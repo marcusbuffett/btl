@@ -17,7 +17,7 @@ public class TestInterface {
     this.numQuestions = 3;
   }
 
-  public <T extends Strategy> Report runStrategy(T strategy) {
+  public Report runStrategy(Strategy strategy) {
     long seed = (new Random()).nextLong();
     List<Question> questions = strategy.generateQuestions(seed, this.numQuestions);
     List<Answer> answers = new ArrayList<>();
