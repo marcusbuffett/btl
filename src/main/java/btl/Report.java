@@ -12,4 +12,32 @@ public class Report {
     this.answers = answers;
     this.format = format;
   }
+
+  public String generateReportRep() {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < this.answers.size(); i++) {
+      Answer answer = this.answers.get(i);
+      sb.append(this.generateAnswerRep(answer));
+      sb.append("\n");
+    }
+    return sb.toString();
+  }
+
+
+  public String generateAnswerRep(Answer answer) {
+    StringBuilder sb = new StringBuilder();
+    sb.append("Question: ");
+    sb.append(answer.question.questionRep);
+    sb.append("\n");
+    sb.append("Correct answer: ");
+    sb.append(answer.question.correctAnswer);
+    sb.append("\n");
+    sb.append("Your answer: ");
+    sb.append(answer.question.correctAnswer);
+    sb.append("\n");
+    sb.append("Time taken: ");
+    sb.append(answer.timeToAnswer);
+    sb.append("\n");
+    return sb.toString();
+  }
 }
