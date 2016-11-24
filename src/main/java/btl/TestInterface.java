@@ -6,6 +6,7 @@ import btl.Strategy;
 import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
+import btl.ReportFormat;
 
 public class TestInterface {
   Scanner scanner;
