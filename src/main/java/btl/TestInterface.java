@@ -35,6 +35,7 @@ public class TestInterface {
     String response = scanner.nextLine();
     long ms_after = System.currentTimeMillis();
     double time = (ms_after - ms_before) / 1000d;
+    System.out.println();
     return new Answer(time, question, response);
   }
 }
