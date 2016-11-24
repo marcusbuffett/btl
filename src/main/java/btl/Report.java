@@ -25,7 +25,6 @@ public class Report {
     return sb.toString();
   }
 
-
   public String generateAnswerRep(Answer answer) {
     StringBuilder sb = new StringBuilder();
     sb.append("Question: ");
