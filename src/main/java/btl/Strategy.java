@@ -3,6 +3,6 @@ package btl;
 import java.util.List;
 
 public interface Strategy {
-  public Question generateQuestion(int seed);
+  public Question generateQuestion(long seed);
   public List<Question> generateQuestions(int seed);
 }

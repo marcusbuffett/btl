@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class TwoDigitAddition implements Strategy {
-  public Question generateQuestion(int seed) {
+  public Question generateQuestion(long seed) {
     // Get a random two digit number from seed
     // Get a random two digit number from seed
     // answer = a + b
