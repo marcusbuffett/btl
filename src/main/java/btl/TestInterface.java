@@ -14,7 +14,7 @@ public class TestInterface {
 
   public TestInterface() {
     this.scanner = new Scanner(System.in);
-    this.numQuestions = 10;
+    this.numQuestions = 3;
   }
 
   public <T extends Strategy> Report runStrategy(T strategy) {
