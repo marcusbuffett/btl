@@ -19,4 +19,5 @@ run {
 
 compileJava { 
   options.compilerArgs << "-Werror" 
+  options.compilerArgs << "-Xlint:unchecked" 
 } 
