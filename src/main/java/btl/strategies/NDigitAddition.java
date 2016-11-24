@@ -22,7 +22,8 @@ public class NDigitAddition implements Strategy {
     return new Question(question, answer);
   }
 
-  private int generateNumber(generator) {
-    return generator.nextInt(90) + 10;
+  private int generateNumber(Random generator) {
+    int base = (int) Math.pow(10, this.n - 1);
+    return generator.nextInt(9 * base) + base;
   }
 }
