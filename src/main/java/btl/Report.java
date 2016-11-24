@@ -15,10 +15,12 @@ public class Report {
 
   public String generateReportRep() {
     StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < this.answers.size(); i++) {
-      Answer answer = this.answers.get(i);
-      sb.append(this.generateAnswerRep(answer));
-      sb.append("\n");
+    if (this.format == ReportFormat.LONG) {
+      for (int i = 0; i < this.answers.size(); i++) {
+        Answer answer = this.answers.get(i);
+        sb.append(this.generateAnswerRep(answer));
+        sb.append("\n");
+      }
     }
     return sb.toString();
   }
