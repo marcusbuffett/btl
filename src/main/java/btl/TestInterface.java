@@ -4,10 +4,12 @@ import btl.Question;
 public class TestInterface {
   TwoDigitAddition strategy;
   Scanner scanner;
+  int numQuestions;
 
   public TestInterface(TwoDigitAddition strategy) {
     this.strategy = strategy;
     this.scanner = new Scanner(System.in);
+    this.numQuestions = 10;
   }
 
   public Report runStrategy() {
