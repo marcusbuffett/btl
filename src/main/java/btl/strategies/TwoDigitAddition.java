@@ -11,8 +11,4 @@ public class TwoDigitAddition implements Strategy {
     // questionRep = Concat numbers together
     return new Question("23 + 73", "96");
   }
-
-  public List<Question> generateQuestions(int seed) {
-    return new ArrayList<Question>();
-  }
 }
