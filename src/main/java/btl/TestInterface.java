@@ -19,17 +19,13 @@ public class TestInterface {
   public <T extends Strategy> Report runStrategy(T strategy) {
     long seed = (new Random()).nextLong();
     List<Question> questions = strategy.generateQuestions(seed, this.numQuestions);
-    List<Answer> wrongAnswers = new ArrayList();
-    List<Answer> rightAnswers = new ArrayList();
+    List<Answer> answers = new ArrayList();
     // TODO: Look up iterators
     for (int i = 0; i < this.numQuestions; i++) {
       Answer answer = this.askQuestion(questions.get(i));
-      if (answer.isCorrect())
-        rightAnswers.add(answer);
-      else
-        wrongAnswers.add(answer);
+      answers.add(answer);
     }
-    return new Report(wrongAnswers, rightAnswers);
+    return new Report(answers, ReportFormat.SHORT);
   }
   
   public Answer askQuestion(Question question) {
