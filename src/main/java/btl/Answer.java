@@ -3,11 +3,11 @@ package btl;
 import btl.Question;
 
 public class Answer {
-  public float timeToAnswer;
+  public double timeToAnswer;
   public Question question;
   public String answer;
 
-  public Answer(float timeToAnswer, Question question, String answer) {
+  public Answer(double timeToAnswer, Question question, String answer) {
     this.timeToAnswer = timeToAnswer;
     this.question = question;
     this.answer = answer;
