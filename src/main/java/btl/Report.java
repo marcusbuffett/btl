@@ -2,6 +2,7 @@ package btl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import btl.ReportFormat;
 
 public class Report {
@@ -22,6 +23,7 @@ public class Report {
         sb.append("\n");
       }
     }
+    sb.append(this.generateStatsRep());
     return sb.toString();
   }
 
@@ -40,5 +42,24 @@ public class Report {
     sb.append(answer.timeToAnswer);
     sb.append("\n");
     return sb.toString();
+  }
+
+  public String generateStatsRep() {
+    List<Answer> right = this.getRightAnswers();
+    List<Answer> wrong = this.getWrongAnswers();
+    StringBuilder sb = new StringBuilder();
+    sb.append("Score: " + right.size() + " / " + this.answers.size());
+    sb.append("\n");
+    double averageTime = this.answers.stream().mapToDouble(a -> a.timeToAnswer).average().orElse(0);
+    sb.append("Average time: " + String.format("%.2f", averageTime) + "s");
+    return sb.toString();
+  }
+
+  private List<Answer> getRightAnswers() {
+    return this.answers.stream().filter(a -> a.isCorrect()).collect(Collectors.toList());
+  }
+
+  private List<Answer> getWrongAnswers() {
+    return this.answers.stream().filter(a -> !a.isCorrect()).collect(Collectors.toList());
   }
 }
