@@ -30,7 +30,7 @@ public class TestInterface {
   }
   
   public Answer askQuestion(Question question) {
-    System.out.println(question.questionRep);
+    System.out.println("> " + question.questionRep);
     long ms_before = System.currentTimeMillis();
     String response = scanner.nextLine();
     long ms_after = System.currentTimeMillis();
