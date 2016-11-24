@@ -16,8 +16,10 @@ public class TestInterface {
   
   public Answer askQuestion(Question question) {
     System.out.println(question.questionRep);
+    long ms_before = System.currentTimeMillis();
     String response = scanner.nextLine();
-    float time = 10.03f;
+    long ms_after = System.currentTimeMillis();
+    float time = (ms_before - ms_after) / 1000f;
     return new Answer(time, question, response);
   }
 }
