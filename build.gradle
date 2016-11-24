@@ -16,3 +16,7 @@ mainClassName = 'btl.Main'
 run {
   standardInput = System.in
 }
+
+compileJava { 
+  options.compilerArgs << "-Werror" 
+} 
