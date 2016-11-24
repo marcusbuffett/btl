@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import btl.Question;
+import java.util.Random;
+import java.util.List;
+import java.util.ArrayList;
 
 public class TestInterface {
   TwoDigitAddition strategy;
@@ -13,7 +16,19 @@ public class TestInterface {
   }
 
   public Report runStrategy() {
-    return new Report();
+    long seed = (new Random()).nextLong();
+    List<Question> questions = this.strategy.generateQuestions(seed, this.numQuestions);
+    List<Answer> wrongAnswers = new ArrayList();
+    List<Answer> rightAnswers = new ArrayList();
+    // TODO: Look up iterators
+    for (int i = 0; i < this.numQuestions; i++) {
+      Answer answer = this.askQuestion(questions.get(i));
+      if (answer.isCorrect())
+        rightAnswers.add(answer);
+      else
+        wrongAnswers.add(answer);
+    }
+    return new Report(wrongAnswers, rightAnswers);
   }
   
   public Answer askQuestion(Question question) {
