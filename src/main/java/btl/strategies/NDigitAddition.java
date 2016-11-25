@@ -13,6 +13,10 @@ public class NDigitAddition implements Strategy {
     this.n = n;
   }
 
+  public String getName() {
+    return this.n + " Digit Addition";
+  }
+
   public Question generateQuestion(long seed) {
     Random generator = new Random(seed);
     int a = this.generateNumber(generator);

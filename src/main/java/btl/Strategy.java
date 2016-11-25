@@ -15,4 +15,6 @@ public interface Strategy {
     }
     return questions;
   }
+
+  public String getName();
 }
