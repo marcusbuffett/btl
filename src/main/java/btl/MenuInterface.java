@@ -14,7 +14,8 @@ public class MenuInterface {
     Collections.addAll(
         this.strategies,
         new NDigitAddition(2),
-        new NDigitAddition(3)
+        new NDigitAddition(3),
+        new Complement()
     );
   }
 
