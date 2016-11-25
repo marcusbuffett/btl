@@ -29,18 +29,10 @@ public class Report {
 
   public String generateAnswerRep(Answer answer) {
     StringBuilder sb = new StringBuilder();
-    sb.append("Question: ");
-    sb.append(answer.question.questionRep);
-    sb.append("\n");
-    sb.append("Correct answer: ");
-    sb.append(answer.question.correctAnswer);
-    sb.append("\n");
-    sb.append("Your answer: ");
-    sb.append(answer.question.correctAnswer);
-    sb.append("\n");
-    sb.append("Time taken: ");
-    sb.append(answer.timeToAnswer);
-    sb.append("\n");
+    sb.append("Question: " + answer.question.questionRep + "\n");
+    sb.append("Correct answer: " + answer.question.correctAnswer + "\n");
+    sb.append("Your answer: " + answer.question.correctAnswer + "\n");
+    sb.append("Time taken: " + answer.timeToAnswer + "\n");
     return sb.toString();
   }
 
