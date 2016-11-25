@@ -52,6 +52,7 @@ public class Report {
     sb.append("\n");
     double averageTime = this.answers.stream().mapToDouble(a -> a.timeToAnswer).average().orElse(0);
     sb.append("Average time: " + String.format("%.2f", averageTime) + "s");
+    sb.append("\n");
     return sb.toString();
   }
 
