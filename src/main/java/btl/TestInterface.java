@@ -11,10 +11,11 @@ import btl.ReportFormat;
 public class TestInterface {
   Scanner scanner;
   int numQuestions;
+  public static final int NUM_QUESTIONS = 10;
 
   public TestInterface() {
     this.scanner = new Scanner(System.in);
-    this.numQuestions = 3;
+    this.numQuestions = NUM_QUESTIONS;
   }
 
   public Report runStrategy(Strategy strategy) {
