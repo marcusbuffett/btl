@@ -23,6 +23,10 @@ public class Report {
         sb.append("\n");
       }
     }
+    for (Answer answer : this.getWrongAnswers()) {
+      sb.append(this.generateAnswerRep(answer));
+      sb.append("\n");
+    }
     sb.append(this.generateStatsRep());
     return sb.toString();
   }
