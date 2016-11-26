@@ -35,7 +35,7 @@ public class Report {
     StringBuilder sb = new StringBuilder();
     sb.append("Question: " + answer.question.questionRep + "\n");
     sb.append("Correct answer: " + answer.question.correctAnswer + "\n");
-    sb.append("Your answer: " + answer.question.correctAnswer + "\n");
+    sb.append("Your answer: " + answer.answer + "\n");
     sb.append("Time taken: " + answer.timeToAnswer + "\n");
     return sb.toString();
   }
