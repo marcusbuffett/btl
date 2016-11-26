@@ -15,6 +15,7 @@ public class MenuInterface {
         this.strategies,
         new NDigitAddition(2),
         new NDigitAddition(3),
+        new Multiplication(2, 1),
         new Complement()
     );
   }
