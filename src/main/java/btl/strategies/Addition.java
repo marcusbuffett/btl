@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class NDigitAddition implements Strategy {
+public class Addition implements Strategy {
   public int n;
 
-  public NDigitAddition(int n) {
+  public Addition(int n) {
     this.n = n;
   }
 

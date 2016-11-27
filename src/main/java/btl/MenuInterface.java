@@ -13,8 +13,8 @@ public class MenuInterface {
     this.strategies = new ArrayList<>();
     Collections.addAll(
         this.strategies,
-        new NDigitAddition(2),
-        new NDigitAddition(3),
+        new Addition(2),
+        new Addition(3),
         new Multiplication(2, 1),
         new Complement()
     );
