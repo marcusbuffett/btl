@@ -25,6 +25,8 @@ public class MenuInterface {
     TestInterface testInterface = new TestInterface();
     Report report = testInterface.runStrategy(strategy);
     System.out.print(report.generateReportRep());
+    System.out.println();
+    start();
   }
 
   public Strategy askForStrategy() {
