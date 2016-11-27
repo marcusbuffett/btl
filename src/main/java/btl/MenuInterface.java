@@ -9,6 +9,7 @@ public class MenuInterface {
   List<Strategy> strategies;
   public MenuInterface() {
     this.strategies = new ArrayList<>();
+    // Ordered by appearance in Mental Magic
     Collections.addAll(
         this.strategies,
         new Addition(2),
