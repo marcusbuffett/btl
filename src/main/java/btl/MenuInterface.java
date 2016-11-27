@@ -1,8 +1,6 @@
 package btl;
 
 import java.util.Scanner;
-import btl.Question;
-import btl.Strategy;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
