@@ -2,8 +2,6 @@ package btl;
 
 import org.junit.*;
 import static org.junit.Assert.*;
-import btl.Complement;
-import btl.Question;
 
 public class MultiplicationTest {
   @Test
