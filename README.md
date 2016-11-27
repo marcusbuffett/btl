@@ -3,7 +3,10 @@
 Current strategies are:
   - 2 digit addition
   - 3 digit addition
+  - 2 by 1 digit multiplication
   - 100-complements (ex: complement of 73 == 27)
+  - 2 digit squares
+  - 2 by 2 digit multiplication
 
 ## Running
 
