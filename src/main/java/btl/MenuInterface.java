@@ -16,7 +16,8 @@ public class MenuInterface {
         new Addition(2),
         new Addition(3),
         new Multiplication(2, 1),
-        new Complement()
+        new Complement(),
+        new Square(2)
     );
   }
 
