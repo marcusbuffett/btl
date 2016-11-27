@@ -8,6 +8,8 @@ import java.util.Random;
 
 public class Addition implements Strategy {
   public int n;
+  public int augend;
+  public int addend;
 
   public Addition(int n) {
     this.n = n;
@@ -19,10 +21,10 @@ public class Addition implements Strategy {
 
   public Question generateQuestion(long seed) {
     Random generator = new Random(seed);
-    int a = this.generateNumber(generator);
-    int b = this.generateNumber(generator);
-    String question = String.format("%d + %d", a, b);
-    String answer = Integer.toString(a + b);
+    augend = this.generateNumber(generator);
+    addend = this.generateNumber(generator);
+    String question = String.format("%d + %d", augend, addend);
+    String answer = Integer.toString(augend + addend);
     return new Question(question, answer);
   }
 
