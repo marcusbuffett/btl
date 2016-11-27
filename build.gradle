@@ -23,3 +23,7 @@ compileJava {
   options.compilerArgs << "-Werror" 
   options.compilerArgs << "-Xlint:unchecked" 
 } 
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
