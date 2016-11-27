@@ -2,7 +2,8 @@ package btl;
 
 import org.junit.*;
 import static org.junit.Assert.*;
-import btl.*;
+import btl.Complement;
+import btl.Question;
 
 public class ComplementTest {
   @Test
