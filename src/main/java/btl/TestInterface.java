@@ -11,7 +11,7 @@ import btl.ReportFormat;
 public class TestInterface {
   Scanner scanner;
   int numQuestions;
-  public static final int NUM_QUESTIONS = 10;
+  public static final int NUM_QUESTIONS = 5;
 
   public TestInterface() {
     this.scanner = new Scanner(System.in);
