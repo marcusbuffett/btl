@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Multiplication implements Strategy {
+  public int multiplier;
+  public int multiplicand;
   int n;
   int m;
 
@@ -21,11 +23,15 @@ public class Multiplication implements Strategy {
 
   public Question generateQuestion(long seed) {
     Random generator = new Random(seed);
-    int a = this.generateNumber(generator, this.n);
-    int b = this.generateNumber(generator, this.m);
-    String question = String.format("%d * %d", a, b);
-    String answer = Integer.toString(a * b);
+    multiplier = this.generateNumber(generator, this.n);
+    multiplicand = this.generateNumber(generator, this.m);
+    String question = generateQuestonRep();
+    String answer = Integer.toString(multiplier * multiplicand);
     return new Question(question, answer);
+  }
+
+  private String generateQuestonRep() {
+    return String.format("%d * %d", multiplier, multiplicand);
   }
 
   private int generateNumber(Random generator, int digits) {
